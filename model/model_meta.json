@@ -1,0 +1,1 @@
+{"inputUnits":[4],"outputUnits":1,"inputs":{"memory":{"dtype":"number","min":0,"max":128},"resoloution":{"dtype":"number","min":1.4,"max":10.1},"battery":{"dtype":"number","min":800,"max":7400},"cores":{"dtype":"number","min":0,"max":8}},"outputs":{"price":{"dtype":"number","min":614,"max":4361}},"isNormalized":true}
