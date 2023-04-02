@@ -1,4 +1,4 @@
-import { createChart, updateChart } from "./scatterplot.js";
+import { createChart, updateChart } from "../libraries/scatterplot.js";
 
 // Neural Network: Can find complex patterns in data and works with regression
 // Regression: When the neural network gives back a numeric value
@@ -74,9 +74,9 @@ async function makePrediction(memory, resoloution, battery, cores) {
       () => console.log("Prediction successful!")
     );
     const priceTwoDecimals = results[0].price.toFixed(2);
-    resultDiv.innerText = `De prijs van de telefoon is €${priceTwoDecimals}`;
+    resultDiv.innerText = `The price of this phone is predicted to be arund: €${priceTwoDecimals}`;
   } else {
-    resultDiv.innerText = `Please fill in all the fields, numbskull!`;
+    resultDiv.innerText = `Please fill in everthing.`;
   }
 }
 

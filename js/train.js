@@ -1,4 +1,4 @@
-import { createChart, updateChart } from "./scatterplot.js";
+import { createChart, updateChart } from "../libraries/scatterplot.js";
 
 let nn;
 
@@ -120,11 +120,11 @@ function checkData(trainData, testData) {
  * epochs: A value that should be as close as possible to value 0
  */
 function startTraining(trainData, testData) {
-  nn.train({ epochs: 20 }, () => finishedTraining(trainData, testData));
+  nn.train({ epochs: 35 }, () => finishedTraining(trainData, testData));
 }
 
 async function finishedTraining(trainData = false, testData) {
-  // Empty array to push all the data in later on
+  // Empty array to push all the data in
   let predictions = [];
   // For loop for every possible price in CSV
   for (let pr = 1200; pr < 4000; pr += 100) {
@@ -139,7 +139,7 @@ async function finishedTraining(trainData = false, testData) {
   }
 
   // Adds the neural network data to the chart
-  updateChart("Predictions", predictions);
+  updateChart("Predictions: ", predictions);
   console.log("Finished training!");
 
   // Show the DOM elements after loading the scatterplot and neural network
